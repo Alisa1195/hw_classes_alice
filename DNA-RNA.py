@@ -19,10 +19,10 @@ class RNA:
         self.complement_seq = str()
         for i in self.seq:
             self.complement_seq += self.complementation[i]
-        return (self.complement_seq)
+        return (self.complement_seq[::-1])
 
 
-class DNA:
+class DNA(RNA):
     def __init__(self, seq):
         self.seq = seq
         self.length = len(seq)
